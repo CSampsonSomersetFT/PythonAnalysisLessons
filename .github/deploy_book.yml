@@ -16,3 +16,8 @@ jobs:
       run: | 
         source '/usr/share/miniconda/etc/profile.d/conda.sh'
         conda create -n jbook -c conda-forge jupyter-book python=3.11
+
+    # Build the book
+    - name: Build the book
+      run: |
+        jupyter-book build .
